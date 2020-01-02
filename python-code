@@ -11,7 +11,7 @@ files_name = os.listdir(path)
 # counts of files. ファイル数をカウント
 num = len(files_name)
 
-# Define of data which will be picked up from files. ファイルから抽出するパラメータ名(Sheet名はsheet,実質のデータ内容はitem2～itme5)
+# Define of data which will be picked up from files. ファイルから抽出するパラメータ名(Sheetはsheet名を記入,実質のデータ内容はitem2～itme5)
 Ti =pd.DataFrame(columns=['sheet','item1','item2','item3','item4','item5'])
 
 
@@ -19,7 +19,7 @@ Ti =pd.DataFrame(columns=['sheet','item1','item2','item3','item4','item5'])
 for i in range(num):
     path2 = path + files_name[i]
     book = openpyxl.load_workbook(path2)
-    sheet = book['item1']
+    sheet = book['sheet']
     item1 = sheet['D2'].value
     item2 = sheet['D3'].value
     item3 = sheet['D4'].value
