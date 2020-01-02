@@ -1,0 +1,39 @@
+import openpyxl
+import os
+import pandas as pd
+from pandas import Series,DataFrame
+
+files_name=[]
+# URL of folder. フォルダの保管場所(excel fileのみを保管)
+path ='C:\\Users\\---' 
+files_name = os.listdir(path)
+
+# counts of files. ファイル数をカウント
+num = len(files_name)
+
+# Define of data which will be picked up from files. ファイルから抽出するパラメータ名(Sheet名はsheet,実質のデータ内容はitem2～itme5)
+Ti =pd.DataFrame(columns=['sheet','item1','item2','item3','item4','item5'])
+
+
+
+for i in range(num):
+    path2 = path + files_name[i]
+    book = openpyxl.load_workbook(path2)
+    sheet = book['item1']
+    item1 = sheet['D2'].value
+    item2 = sheet['D3'].value
+    item3 = sheet['D4'].value
+    item3 = sheet['D5'].value
+    item4 = sheet['E2'].value
+    item5 = sheet['E3'].value
+    temp = pd.Series([sheet,item1,item2,item3,item4,item5],index=Ti.columns , name =sheet)
+
+# Add the data to data list. 抽出したデータをデータリストへ追加
+    Ti =Ti.append(temp)
+    book.close()
+
+
+print(Ti)
+
+# Data list will be written as an excel file. 抽出したデータを1つのエクセルファイルとして出力
+Ti.to_excel('result.xlsx')
