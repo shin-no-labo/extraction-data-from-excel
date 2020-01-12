@@ -1,7 +1,7 @@
 Purpose of this program is extraction data from excel files by automatically. 
 Practically, there are many files in the office but it is exhausted operation to take data which are needed.
 
-This code is very simple but I think it can work practically at business.
+This code is very simple but I think it can work practically at business or study.
 I am happy if your program will be came up with by this program.
 
 Besides, I can understand that data cleansing is important by this activity.
@@ -14,7 +14,7 @@ Following data cleansing is needed before running.
 (If some data is doubt, it should be deleated. Especially, if data was noted by human, handling should be carefully.)
 
 このプログラムの目的は、Excelファイルからデータを自動的に抽出することです。
-皆さん働いている中で多くのデータを目にする機会があると思いますが、必要なデータを取得するのは大変な作業であり、ときに手付かずです。
+研究や労働などの活動をしていると多くのデータを目にする機会があると思いますが、必要なデータを取得するのは大変な作業であり、ときに手付かずです。
 
 このコードは非常に単純ですが、自動的にexcelファイル群から必要なセルデータを取得できるため、手付かずのデータに手を付けることが出来ます。
 皆さんもこのコードを参考にして、プログラムを書いてもらえると幸いです。
